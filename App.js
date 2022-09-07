@@ -31,12 +31,12 @@ const main = async() => {
   const nama = await Pertanyaan('Nama Lengkap: ');
   const nohp = await Pertanyaan('No Hp: ');
   const email = await Pertanyaan('Email: ');
-  SaveQuestion(nama, nohp, email); // Memanggil fungsi untuk menyimpan data
+  SaveContact(nama, nohp, email); // Memanggil fungsi untuk menyimpan data
 }
 main();
 
 // Simpan data 
-const SaveQuestion = (nama, nohp, email) => {
+const SaveContact = (nama, nohp, email) => {
   const contact = {nama, nohp, email}; // Menampung  data ke dalam object 
   const file = fs.readFileSync(filePath, contact); // Membaca file
   const contacts = JSON.parse(file); // Mengubah data ke JSON
