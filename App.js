@@ -20,8 +20,8 @@ if(!fs.existsSync(filePath)) {
 // Function untuk Membuat Pertanyaan
 const Pertanyaan = (ask) => {
   return new Promise((resolve, reject) => {
-  rl.question( ask, (jawaban) => {
-    resolve(jawaban)
+    rl.question( ask, (jawaban) => {
+      resolve(jawaban);
     });
   });
 }
@@ -33,6 +33,7 @@ const main = async() => {
   const email = await Pertanyaan('Email: ');
   SaveContact(nama, nohp, email); // Memanggil fungsi untuk menyimpan data
 }
+
 main();
 
 // Simpan data 
