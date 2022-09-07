@@ -38,14 +38,14 @@ main();
 // Simpan data 
 const SaveQuestion = (nama, nohp, email) => {
   const contact = {nama, nohp, email}; // Menampung  data ke dalam object 
-    const file = fs.readFileSync(filePath, contact); // Membaca file
-    const contacts = JSON.parse(file); // Mengubah data ke JSON
-    contacts.push(contact); // Push data
+  const file = fs.readFileSync(filePath, contact); // Membaca file
+  const contacts = JSON.parse(file); // Mengubah data ke JSON
+  contacts.push(contact); // Push data
         
-    // Tulis data ke file dan ubah ke string
-    fs.writeFileSync(filePath, JSON.stringify(contacts, null, 2));
-    console.log('Terima Kasih!');
+  // Tulis data ke file dan ubah ke string
+  fs.writeFileSync(filePath, JSON.stringify(contacts, null, 2));
+  console.log('Terima Kasih!');
 
-    //close program
-    rl.close();
+  //close program
+  rl.close();
 }
